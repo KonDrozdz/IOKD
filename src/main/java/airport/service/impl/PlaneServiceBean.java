@@ -7,10 +7,11 @@ import airport.repository.PlaneDao;
 import airport.repository.ManufacturerDao;
 import airport.repository.AirportDao;
 import airport.service.PlaneService;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.logging.Logger;
-
+@Component
 public class PlaneServiceBean implements PlaneService {
 
     private  static final Logger log = Logger.getLogger(PlaneService.class.getName());

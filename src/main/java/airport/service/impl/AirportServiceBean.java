@@ -5,10 +5,13 @@ import airport.model.Airport;
 import airport.repository.PlaneDao;
 import airport.repository.AirportDao;
 import airport.service.AirportService;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.logging.Logger;
-
+@Component
+@Scope("prototype")
 public class AirportServiceBean implements AirportService {
 
     private static final Logger log = Logger.getLogger(AirportService.class.getName());

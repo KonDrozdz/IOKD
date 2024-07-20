@@ -3,10 +3,11 @@ package airport.repository.mem;
 import airport.model.Airport;
 import airport.model.Plane;
 import airport.repository.AirportDao;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.stream.Collectors;
-
+@Component("airportDao")
 public class MemAirportDao implements AirportDao {
 
     @Override
