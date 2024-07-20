@@ -67,8 +67,8 @@ public class SampleData {
         airports.add(airbusAirport);
         airports.add(embraerAirport);
 
-        Planes.add(boeing787);
-        Planes.add(boeing747);
+         Planes.add(boeing787);
+      Planes.add(boeing747);
         Planes.add(boeing737);
 
         Planes.add(a320);

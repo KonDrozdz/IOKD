@@ -1,12 +1,18 @@
 package airport.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Manufacturer {
+    @JsonIgnore
     private int id;
     private String name;
     private String country;
+
+    @JsonIgnore
     private List<Plane> Planes = new ArrayList<>();
 
     public Manufacturer() {}
