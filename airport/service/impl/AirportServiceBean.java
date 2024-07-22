@@ -10,8 +10,9 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.logging.Logger;
-@Component
-@Scope("prototype")
+import org.springframework.stereotype.Service;
+
+@Service
 public class AirportServiceBean implements AirportService {
 
     private static final Logger log = Logger.getLogger(AirportService.class.getName());
@@ -47,6 +48,11 @@ public class AirportServiceBean implements AirportService {
     public List<Plane> getPlanesInAirport(Airport airport) {
         log.info("searching planes in airport " + airport.getId());
         return planeDao.findByAirport(airport);
+    }
+    @Override
+    public Airport addAirports(Airport airport) {
+        log.info("adding new airport " + airport.getName());
+        return airportDao.Save(airport);
     }
 }
 

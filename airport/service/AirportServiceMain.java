@@ -14,15 +14,15 @@ import java.util.List;
 public class AirportServiceMain {
     public static void main(String[] args) {
 
-        System.out.println("Let's find showrooms!");
+        System.out.println("Let's find airports!");
 
         ApplicationContext context = new AnnotationConfigApplicationContext("airport");
         AirportService service = context.getBean(AirportServiceBean.class);
         AirportService service2 = context.getBean(AirportService.class);
 
-        List<Airport> showrooms = service.getAllAirports();
-        System.out.println(showrooms.size() + " showrooms found:");
-        showrooms.forEach(System.out::println);
+        List<Airport> airports = service.getAllAirports();
+        System.out.println(airports.size() + " airports found:");
+        airports.forEach(System.out::println);
 
         String foo = context.getBean(String.class);
         System.out.println("foo string: " + foo);

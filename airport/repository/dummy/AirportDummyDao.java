@@ -24,4 +24,9 @@ public class AirportDummyDao implements AirportDao {
     public List<Airport> findByPlane(Plane car) {
         return List.of();
     }
+
+    @Override
+    public Airport Save(Airport airport) {
+        return null;
+    }
 }

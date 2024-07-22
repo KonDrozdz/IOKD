@@ -2,10 +2,10 @@ package airport.repository.mem;
 
 import airport.model.Manufacturer;
 import airport.repository.ManufacturerDao;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-@Component
+@Repository("manufacturerDao")
 public class MemManufacturerDao implements ManufacturerDao {
 
     @Override

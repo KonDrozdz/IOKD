@@ -3,11 +3,11 @@ package airport.repository.mem;
 import airport.model.Airport;
 import airport.model.Plane;
 import airport.repository.AirportDao;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.stream.Collectors;
-@Component("airportDao")
+@Repository("airportDao")
 public class MemAirportDao implements AirportDao {
 
     @Override
@@ -23,5 +23,16 @@ public class MemAirportDao implements AirportDao {
     @Override
     public List<Airport> findByPlane(Plane plane) {
         return SampleData.airports.stream().filter(s -> s.getPlanes().contains(plane)).collect(Collectors.toList());
+    }
+    @Override
+    public Airport Save(Airport airport) {
+        int maxId = SampleData.airports.stream()
+                .sorted((s1, s2) -> Integer.compare(s2.getId(), s1.getId()))
+                .map(s->s.getId())
+                .findFirst()
+                .orElse(0);
+        airport.setId(maxId + 1);
+        SampleData.airports.add(airport);
+        return airport;
     }
 }

@@ -12,4 +12,5 @@ public interface AirportDao {
     Airport findById(int id);
 
     List<Airport> findByPlane(Plane plane);
+    Airport Save(Airport airport);
 }

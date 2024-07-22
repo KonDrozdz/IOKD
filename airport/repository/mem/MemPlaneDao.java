@@ -4,11 +4,11 @@ import airport.model.Airport;
 import airport.model.Plane;
 import airport.model.Manufacturer;
 import airport.repository.PlaneDao;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.stream.Collectors;
-@Component
+@Repository("planeDao")
 public class MemPlaneDao implements PlaneDao {
     @Override
     public List<Plane> findAll() {
