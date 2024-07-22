@@ -35,6 +35,6 @@ public class MemPlaneDao implements PlaneDao {
 
     @Override
     public List<Plane> findByAirport(Airport airport) {
-        return SampleData.Planes.stream().filter(c -> c.getAirports().equals(airport)).collect(Collectors.toList());
+        return SampleData.Planes.stream().filter(c -> c.getAirports().contains(airport)).collect(Collectors.toList());
     }
 }

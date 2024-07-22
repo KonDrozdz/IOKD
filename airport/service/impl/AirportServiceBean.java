@@ -5,6 +5,7 @@ import airport.model.Airport;
 import airport.repository.PlaneDao;
 import airport.repository.AirportDao;
 import airport.service.AirportService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -19,7 +20,7 @@ public class AirportServiceBean implements AirportService {
 
     private AirportDao airportDao;
     private PlaneDao planeDao;
-
+    @Autowired
     public AirportServiceBean(AirportDao airportDao, PlaneDao planeDao) {
         log.info("creating airport service bean");
         this.airportDao = airportDao;

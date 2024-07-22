@@ -20,6 +20,6 @@ Content-Type: application/json
 Accept-Language: de
 
 {
-  "name": "",
+  "name": "test",
   "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO-zo4LFeyx8al5MUOOLl75eDwmsooVXfP9A&s"
 }

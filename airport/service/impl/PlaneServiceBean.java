@@ -32,11 +32,13 @@ public class PlaneServiceBean implements PlaneService {
         log.info("searching all planes");
         return planeDao.findAll();
     }
-
+    @Override
     public List<Plane> getPlanesByAirport(Airport airport) {
         log.info("searching planes by airport " + airport.getId());
         return planeDao.findByAirport(airport);
     }
+
+
 
     @Override
     public Plane getPlaneById(int id) {

@@ -30,6 +30,7 @@ public class AirportRest {
         private final PlaneService planeService;
         private final MessageSource messageSource;
         private final LocaleResolver localeResolver;
+        private final AirportValidator airportValidator;
 
 
 
