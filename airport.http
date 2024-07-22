@@ -14,11 +14,12 @@ Accept: application/xml
 GET http://localhost:8080/webapi/planes/7/airports
 Accept: application/json
 
-### create new showroom
+### create new airports
 POST http://localhost:8080/webapi/airports
 Content-Type: application/json
+Accept-Language: de
 
 {
-  "name": "Lotnisko",
+  "name": "",
   "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO-zo4LFeyx8al5MUOOLl75eDwmsooVXfP9A&s"
 }
